@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Trig Final Project</title>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<style>
+			body {
+				background-color: #000;
+				!background-image: url('images/background.jpg');
+				background-repeat: no-repeat;
+			}
+			#container {
+				width: 900px;
+				margin: 50px auto 0px auto;
+			}
+			h1 {
+				font-family:'Open Sans';
+				color: #07d;
+				font-size: 25px;
+				font-weight: 100;
+				margin-bottom: 20px;
+				text-align: center;
+			}
+			h1 a {
+				text-decoration: none;
+				color: #07d;
+			}
+			h1 a:hover {
+				text-decoration: underline;
+			}
+			#main {
+				width: 900px;
+				border: 1px solid #07d;
+				border-radius: 4px;
+				background-color: rgba(0,0,0,.9);
+				!background-image: url('images/water.jpg');
+			}
+		</style>
+	</head>
+	
+	<body>
+	
+		<div id='container'>
+			
+			<h1><a href='index.html'>RainDrop</a> - <a href='info.html'>Info</a></h1>
+			
+			<div id='main'>
+				<div id='posDiv'>
+					<div id='gameOverBox' style='display: none;'>
+						<h2 id='score'></h2>
+						<h3>Game Over! You hit a rock.<br/><a href='index.php?play=true' style='text-decoration: none;'>Try again</a><br/><br/>Record your score here!</h3>
+						<form method='post' action='index.php'>
+							<label>Name: </label><input type='text' name='name' /><br/>
+							<label id='date' style='display: none;'>Date: </label><!--<br/>-->
+							<label id='scoreField' style='display: none;'>Score: </label><!--<br/>-->
+							<input type='hidden' name='field_date' value='' id='field_date' />
+							<input type='hidden' name='field_score' value='' id='field_score' />
+							<input type='submit' value='Enter' />
+						</form>
+					</div>
+				</div>
+				
+				<canvas width="900" height="600" id="canvas">
+					Your web browser does not support the canvas element.
+				</canvas>
+				
+				
+				<!--Scripts-->
+				<script type="text/javascript" src="scripts/classes.js"></script>
+				<script type="text/javascript" src="scripts/main.js"></script>
+				
+			</div><!--end main-->
+			
+		</div><!--end container-->
+		
+	</body>
+</html>
